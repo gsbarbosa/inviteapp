@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Com a presença e o amor de seus pais</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Allura&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Carta Fechada -->
+        <div class="envelope" id="envelope">
+            <div class="envelope-back"></div>
+            <div class="envelope-front">
+                <div class="envelope-flap"></div>
+                <div class="envelope-content">
+                    <p class="envelope-text">Este convite é exclusivo para você</p>
+                </div>
+                <div class="seal" id="seal" onclick="openEnvelope()">
+                    <div class="seal-logo-wrapper" onclick="openEnvelope()">
+                        <img src="logo.png" alt="Logo" class="seal-logo" onclick="openEnvelope()">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conteúdo do Convite (inicialmente oculto) -->
+        <div class="invitation-content" id="invitationContent">
+            <div class="invitation-card">
+                <div class="invitation-header">
+                    <p class="headline-text">Com a presença e o amor de seus pais</p>
+                    <div class="decorative-line"></div>
+                    <div class="parents-names">
+                        <p class="parent-line">Tulio Barbosa e Valdenia Menezes</p>
+                        <p class="parent-line">Noé Queiroz e Fátima Pereira</p>
+                    </div>
+                </div>
+                
+                <div class="invitation-body">
+                    <div class="names-container">
+                        <p class="names">Gustavo Barbosa</p>
+                        <p class="names">&</p>
+                        <p class="names">Noele Queiroz</p>
+                    </div>
+                    
+                    <p class="date-label">Convidam para celebrar o seu casamento</p>
+                    
+                    <div class="date-info">
+                        <div class="date-item">
+                            <span class="date-label-small">Data</span>
+                            <span class="date-value">19 de setembro de 2025</span>
+                        </div>
+                        <div class="date-item">
+                            <span class="date-label-small">Horário</span>
+                            <span class="date-value">15:00</span>
+                        </div>
+                        <div class="date-item">
+                            <span class="date-label-small">Local</span>
+                            <span class="date-value">Vila Mona<br>Jijoca de Jericoacoara - Ceará - Brasil</span>
+                        </div>
+                    </div>
+                    
+                    <p class="closing">Sua presença é muito importante para nós!</p>
+                    
+                    <div class="rsvp">
+                        <p>Por favor, confirme sua presença até:</p>
+                        <p class="rsvp-date">10 de setembro de 2025</p>
+                        <a href="https://wa.me/5588982296621?text=Olá,%20gostaria%20de%20confirmar%20presença%20no%20casamento%20da%20Noele%20e%20Gustavo" class="rsvp-button" target="_blank">Confirmar Presença</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
