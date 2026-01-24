@@ -1,6 +1,26 @@
 let isOpened = false;
 let envelope, seal, invitationContent;
 
+// Função para pegar parâmetro da URL
+function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+}
+
+// Atualizar texto do envelope com parâmetro da URL
+function updateEnvelopeText() {
+    const envelopeText = document.getElementById('envelopeText');
+    if (!envelopeText) return;
+    
+    const forParam = getUrlParameter('for');
+    
+    if (forParam && forParam.trim() !== '') {
+        envelopeText.textContent = `Este convite é exclusivo para ${forParam}`;
+    }
+}
+
 // Função global para abrir envelope
 function openEnvelope() {
     if (isOpened) return;
@@ -21,6 +41,9 @@ document.addEventListener('DOMContentLoaded', function() {
     envelope = document.getElementById('envelope');
     seal = document.getElementById('seal');
     invitationContent = document.getElementById('invitationContent');
+    
+    // Atualizar texto do envelope com parâmetro da URL
+    updateEnvelopeText();
 
     // Remove fundo branco da logo
     function removeWhiteBackground() {

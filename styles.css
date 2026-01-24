@@ -273,10 +273,12 @@ body {
 }
 
 .invitation-card {
-    background-image: url('background.png');
-    background-size: 100% 100%;
-    background-position: center top;
-    background-repeat: no-repeat;
+    background: 
+        linear-gradient(to bottom, rgba(246, 241, 233, 0.4) 0%, rgba(246, 241, 233, 0.5) 100%),
+        url('background.png');
+    background-size: 100% 100%, 100% 100%;
+    background-position: center top, center top;
+    background-repeat: no-repeat, no-repeat;
     padding: 0;
     border-radius: 10px;
     box-shadow: 0 25px 70px rgba(139, 105, 20, 0.25), 0 0 0 1px rgba(139, 105, 20, 0.1);
@@ -340,12 +342,13 @@ body {
 .headline-text {
     font-family: 'Cormorant Garamond', 'Libre Baskerville', 'Playfair Display', serif;
     font-style: italic;
-    font-weight: 500;
+    font-weight: 300;
     font-size: 1.1em; /* reduzido de 1.76em */
-    letter-spacing: 0.03em; /* tracking +4 */
+    letter-spacing: 0.01em; /* tracking +4 */
     color: #4A4138; /* cinza quente */
     margin-bottom: 12px;
     text-align: center;
+    white-space: nowrap; /* mantém na mesma linha */
 }
 
 .decorative-line {
@@ -379,25 +382,47 @@ body {
     font-size: 0.99em; /* reduzido 5-8% de 1.05em */
     padding: 0 50px 30px 50px;
 }
- 
+
 .names-container {
-    margin: 20px + 4px; /* espaço entre pais e noivos: 20px + 4px */
+    margin: 16px 0; /* margem normal */
+    padding: 20px 5px; /* padding aumentado para dar respiro */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* voltou para coluna */
     align-items: center;
-    gap: 10px; /* aumentado para não "colar" */
+    justify-content: center;
+    gap: 0px; /* sem espaço entre as linhas */
 }
 
 /* C) Nomes dos noivos */
 .names {
     font-family: 'Liana', 'Allura', 'Playfair Script', 'Great Vibes', cursive;
-    font-size: 9.9em; /* aumentado de 2.66em */
+    font-size: 1.6em !important; /* reduzido ainda mais para caber em uma linha */
     color: #B89A5B; /* dourado champagne */
     margin: 0;
-    font-weight: 600; /* aumentado de 400 para 600 (semi-bold) */
-    letter-spacing: 0.18em; /* tracking +12 (entre +5 e +15) */
-    line-height: 1.4; /* aumentado para não "colar" */
+    padding: 2px 0; /* padding vertical reduzido */
+    font-weight: 400; /* aumentado de 400 para 600 (semi-bold) */
+    letter-spacing: 0.15em; /* tracking reduzido um pouco */
+    line-height: 1.2; /* reduzido para aproximar as linhas */
+    white-space: nowrap; /* força a ficar em uma linha */
+    text-shadow: 0 3px 10px rgba(184, 154, 91, 0.5), 0 5px 20px rgba(184, 154, 91, 0.3); /* sombras mais intensas para destaque */
+    filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.2)); /* sombra adicional mais pronunciada */
 }
+
+.names-e {
+    font-family: 'Liana', 'Allura', 'Playfair Script', 'Great Vibes', cursive;
+    font-size: 1.1em !important; /* reduzido ainda mais para caber em uma linha */
+    color: #B89A5B; /* dourado champagne */
+    margin: 0;
+    padding: 2px 0; /* padding vertical reduzido */
+    font-weight: 400; /* aumentado de 400 para 600 (semi-bold) */
+    letter-spacing: 0.15em; /* tracking reduzido um pouco */
+    line-height: 1.2; /* reduzido para aproximar as linhas */
+    white-space: nowrap; /* força a ficar em uma linha */
+    text-shadow: 0 3px 10px rgba(184, 154, 91, 0.5), 0 5px 20px rgba(184, 154, 91, 0.3); /* sombras mais intensas para destaque */
+    filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.2)); /* sombra adicional mais pronunciada */
+}
+
+
 
 /* D) Texto institucional */
 .date-label {
@@ -556,12 +581,17 @@ body {
         padding: 30px 20px;
     }
     
+    .headline-text {
+        white-space: normal; /* permite quebra de linha em mobile */
+        font-size: 0.95em;
+    }
+    
     .invitation-header h1 {
         font-size: 2em;
     }
     
     .names {
-        font-size: 1.5em;
+        font-size: 2.0em; /* reduzido para mobile */
     }
     
     .date-value {
