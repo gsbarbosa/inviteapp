@@ -396,33 +396,17 @@ body {
 /* C) Nomes dos noivos */
 .names {
     font-family: 'Liana', 'Allura', 'Playfair Script', 'Great Vibes', cursive;
-    font-size: 1.6em !important; /* reduzido ainda mais para caber em uma linha */
+    font-size: 1.9em !important; /* reduzido ainda mais para caber em uma linha */
     color: #B89A5B; /* dourado champagne */
     margin: 0;
     padding: 2px 0; /* padding vertical reduzido */
-    font-weight: 400; /* aumentado de 400 para 600 (semi-bold) */
+    font-weight: 200; /* aumentado de 400 para 600 (semi-bold) */
     letter-spacing: 0.15em; /* tracking reduzido um pouco */
-    line-height: 1.2; /* reduzido para aproximar as linhas */
+    line-height: 3.2; /* reduzido para aproximar as linhas */
     white-space: nowrap; /* força a ficar em uma linha */
     text-shadow: 0 3px 10px rgba(184, 154, 91, 0.5), 0 5px 20px rgba(184, 154, 91, 0.3); /* sombras mais intensas para destaque */
     filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.2)); /* sombra adicional mais pronunciada */
 }
-
-.names-e {
-    font-family: 'Liana', 'Allura', 'Playfair Script', 'Great Vibes', cursive;
-    font-size: 1.1em !important; /* reduzido ainda mais para caber em uma linha */
-    color: #B89A5B; /* dourado champagne */
-    margin: 0;
-    padding: 2px 0; /* padding vertical reduzido */
-    font-weight: 400; /* aumentado de 400 para 600 (semi-bold) */
-    letter-spacing: 0.15em; /* tracking reduzido um pouco */
-    line-height: 1.2; /* reduzido para aproximar as linhas */
-    white-space: nowrap; /* força a ficar em uma linha */
-    text-shadow: 0 3px 10px rgba(184, 154, 91, 0.5), 0 5px 20px rgba(184, 154, 91, 0.3); /* sombras mais intensas para destaque */
-    filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.2)); /* sombra adicional mais pronunciada */
-}
-
-
 
 /* D) Texto institucional */
 .date-label {
@@ -487,6 +471,14 @@ body {
     letter-spacing: 0.1em; /* tracking +10 (entre +5 e +15) */
 }
 
+.date-value-local {
+    font-family: 'Cormorant Garamond', 'Libre Baskerville', 'Playfair Display', serif;
+    font-size: 1.01em; /* +5% em relação ao texto institucional (0.99em * 1.05) */
+    color: #B89A5B; /* dourado */
+    font-weight: 400; /* Semibold */
+    letter-spacing: 0.1em; /* tracking +10 (entre +5 e +15) */
+}
+
 /* F) Rodapé */
 .closing {
     font-family: 'Cormorant Garamond', 'Libre Baskerville', 'Playfair Display', serif;
@@ -521,7 +513,7 @@ body {
     font-family: 'Cormorant Garamond', 'Libre Baskerville', 'Playfair Display', serif;
     color: rgba(74, 65, 56, 0.9);
     margin-bottom: 10px;
-    font-size: 0.99em;
+    font-size: 0.88em;
     letter-spacing: 0.05em;
 }
 
