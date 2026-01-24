@@ -17,7 +17,7 @@ function updateEnvelopeText() {
     const forParam = getUrlParameter('for');
     
     if (forParam && forParam.trim() !== '') {
-        envelopeText.textContent = `Este convite é exclusivo para ${forParam}`;
+        envelopeText.textContent = `${forParam}`;
     }
 }
 
