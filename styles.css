@@ -19,10 +19,11 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 0;
     overflow-x: hidden;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* Melhora scroll no iOS */
 }
 
 @media (max-width: 600px) {
@@ -260,16 +261,22 @@ body {
     opacity: 0;
     width: 100%;
     max-width: 500px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    overflow-x: hidden;
     transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55),
                 opacity 0.8s ease;
     z-index: 10;
     pointer-events: none;
+    -webkit-overflow-scrolling: touch; /* Melhora scroll no iOS */
 }
 
 .invitation-content.show {
     transform: translateX(-50%) scale(1);
     opacity: 1;
     pointer-events: all;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .invitation-card {

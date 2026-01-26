@@ -28,8 +28,10 @@ function openEnvelope() {
     isOpened = true;
     if (envelope) envelope.classList.add('opened');
     
-    // Faz scroll suave para o topo
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Faz scroll suave para o topo (sem travar)
+    setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
     
     // Aguarda a animação da carta antes de mostrar o conteúdo
     setTimeout(() => {
